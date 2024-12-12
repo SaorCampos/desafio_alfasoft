@@ -21,6 +21,7 @@ abstract class DependencyInjection
     {
         return collect([
             new AuthDi($app),
+            new ContactDi($app),
         ]);
     }
 

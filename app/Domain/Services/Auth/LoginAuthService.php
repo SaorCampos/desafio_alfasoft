@@ -16,7 +16,6 @@ class LoginAuthService implements ILoginAuthService
     {
         $jwtToken = $this->authRepository->login($request);
         if (!$jwtToken) throw new \Exception('Invalid credentials', 401);
-        $jwtToken->userName = auth()->user()->name;
         return $jwtToken;
     }
 }
