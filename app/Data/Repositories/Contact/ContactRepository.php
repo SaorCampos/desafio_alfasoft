@@ -24,7 +24,8 @@ class ContactRepository implements IContactRepository
                 'c.atualizado_em',
                 'c.deletado_em',
             ])
-            ->withTrashed();
+            ->withTrashed()
+            ->orderBy('c.nome', 'asc');
 
         $filters = $this->getFilters($request);
         foreach ($filters as $filter) {

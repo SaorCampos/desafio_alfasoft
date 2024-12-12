@@ -20,7 +20,7 @@ class ContactListingRequest extends BaseRequest
         return [
             "nome" => "string",
             "telefone" => "string",
-            "email" => "email",
+            "email" => "string",
         ];
     }
 }

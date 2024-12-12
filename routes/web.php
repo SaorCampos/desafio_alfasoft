@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('contact-list');
+// });
+Route::get('/contact-list', function () {
+    return view('contact-list');
+});
+Route::get('contact-list/{id}', function ($id) {
+    return view('contact-details', ['id' => $id]);
+});
+Route::get('/contact-create', function () {
+    return view('create-contacts');
+});
+Route::get('/contact-edit/{id}', function ($id) {
+    return view('update-contact', ['id' => $id]);
 });

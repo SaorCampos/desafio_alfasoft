@@ -22,7 +22,7 @@ class ContactDeleteTest extends TestCase
         // Assert
         $response->assertUnauthorized();
     }
-    public function test_deleteContact_with_beingAuthenticated_onInvalidData_rreturnsNotFound(): void
+    public function test_deleteContact_with_beingAuthenticated_onInvalidData_returnsNotFound(): void
     {
         // Arrange
         Contact::truncate();
